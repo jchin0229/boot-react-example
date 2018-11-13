@@ -59,6 +59,7 @@ To build the backend: use the following commands:
 >>create BootReactExample  and GreetingController in main/java directory.
 >>add backend application support in maven pom.xml.
 
+```
  <build>
   <plugins>
    <plugin>
@@ -67,13 +68,18 @@ To build the backend: use the following commands:
    </plugin>   
   </plugins>
  </build>
+ ```
 
->>since the front/backend application is different port, add proxy to the package.json 
+>>since the front/backend application is different port, add proxy to the package.json
+
 >>mvn clean package && java -jar target/boot-react-example-0.0.1-SNAPSHOT.jar
+
 >>check localhost:8080/greet for backend application to return "hello world"
  
 To merge projects into one application with nodes, we use maven.
 >>see pom.xml for frontend support in maven pom.xml
+
+```
 <build>
  <plugins>
   <plugin>
@@ -95,14 +101,12 @@ To merge projects into one application with nodes, we use maven.
       <npmVersion>5.0.3</npmVersion>
      </configuration>
     </execution>
-
     <execution>
      <id>npm install</id>
      <goals>
       <goal>npm</goal>
      </goals>
     </execution>
-
     <execution>
      <id>Build frontend</id>
      <goals>
@@ -113,7 +117,7 @@ To merge projects into one application with nodes, we use maven.
      </configuration>
     </execution>
    </executions>
-  </plugin>
+  </plugin> 
   <plugin>
    <groupId>org.apache.maven.plugins</groupId>
    <artifactId>maven-resources-plugin</artifactId>
@@ -137,7 +141,8 @@ To merge projects into one application with nodes, we use maven.
    </executions>
   </plugin>
  </plugins>
-</build>
+ </build>
+```
 
 >>since the front/backend application is on same site, comment or get rid of the proxy in the package.json.
 
