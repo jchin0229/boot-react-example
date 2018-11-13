@@ -3,8 +3,11 @@ http://matejsprogblog.blogspot.com/2017/06/creating-new-web-app-using-create-rea
 
 To build the front end: use the following commands:
 >>npm install -g create-react-app
+
 >>create-react-app boot-react-example
+
 >>use npm start to start front end app.
+
 >>check localhost:3000
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,7 +76,10 @@ To merge projects into one application with nodes, we use maven.
 >>see pom.xml for frontend support in maven pom.xml
 <build>
  <plugins>
-     ....backend plugin........
+  <plugin>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-maven-plugin</artifactId>
+  </plugin>   
   <plugin>
    <groupId>com.github.eirslett</groupId>
    <artifactId>frontend-maven-plugin</artifactId>
@@ -134,5 +140,7 @@ To merge projects into one application with nodes, we use maven.
 </build>
 
 >>since the front/backend application is on same site, comment or get rid of the proxy in the package.json.
+
 >>mvn clean package && java -jar target/boot-react-example-0.0.1-SNAPSHOT.jar
+
 >>check localhost:8080 for the "hello world" message send from the backend application.
