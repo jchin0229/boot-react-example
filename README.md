@@ -146,6 +146,10 @@ To merge projects into one application with nodes, we use maven.
 
 >>since the front/backend application is on same site, comment or get rid of the proxy in the package.json.
 
->>mvn clean package && java -jar target/boot-react-example-0.0.1-SNAPSHOT.jar
+>>mvn clean package
+
+>>cd target
+
+>>java -jar target/boot-react-example-0.0.1-SNAPSHOT.jar
 
 >>check localhost:8080 for the "hello world" message send from the backend application.
