@@ -74,6 +74,8 @@ To build the backend: use the following commands:
 
 >>mvn clean package && java -jar target/boot-react-example-0.0.1-SNAPSHOT.jar
 
+> or it can be run without build using mvn spring-boot:run
+
 >>check localhost:8080/greet for backend application to return "hello world"
  
 To merge projects into one application with nodes, we use maven.
