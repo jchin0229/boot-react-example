@@ -1,3 +1,5 @@
+Setup React Development Environment using NPM and create-react-app with builtin Tomcat server.
+
 This project was build using the following link:
 http://matejsprogblog.blogspot.com/2017/06/creating-new-web-app-using-create-react.html
 
