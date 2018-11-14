@@ -101,6 +101,7 @@ see pom.xml for frontend support in maven pom.xml
 ```
 
 Since the front/backend application is on same site, comment or get rid of the proxy in the package.json.
+note: modify the App.js to call backend using fetch command. (see App.js for detail)
 ```
 mvn clean package
 cd target
